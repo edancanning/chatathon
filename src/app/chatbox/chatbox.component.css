@@ -1,0 +1,199 @@
+.chatbox {
+  position: absolute;
+  z-index: 999999;
+  right: 10rem;
+  bottom: 0;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: white;
+}
+
+.closed {
+  background-color: #0363ad;
+  color: #ffffff;
+  padding: 0.75rem 5rem;
+  cursor: pointer;
+}
+
+.side {
+  display: inline-block;
+  width: 23rem;
+  font-size: 0.9rem;
+}
+
+.side.historyOn {
+  width: 15rem;
+}
+
+.main {
+  display: inline-block;
+  width: 22rem;
+}
+
+.header {
+  background-color: #0363ad;
+  color: #ffffff;
+  height: 3rem;
+}
+
+.settings {
+  vertical-align: middle;
+  position: relative;
+  top: 0.75rem;
+  left: 0.5rem;
+  float: left;
+}
+
+.title {
+  position: relative;
+  top: 0.9rem;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 2rem;
+}
+
+.close {
+  float: right;
+  vertical-align: middle;
+  position: relative;
+  top: 0.75rem;
+  right: 0.5rem;
+}
+
+.body {
+  height: 25rem;
+  width: 100%;
+  overflow-y: scroll;
+  padding-top: 0.75rem;
+}
+
+.category {
+  cursor: pointer;
+  background-color: #0363ad;
+  color: #ffffff;
+  height: 7rem;
+  width: 9rem;
+  display: inline-block;
+  margin: 0.5rem;
+  line-height: 7rem;
+}
+
+.faq {
+  text-align: left;
+  padding: 0.75rem 0;
+  width: 100%;
+  border-bottom: 1px solid #ededed;
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+
+.selected-faq {
+  background-color: #f7f7f7;
+}
+
+.faq-body {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.talk-to-human {
+  width: 12rem;
+  height: 3rem;
+  background-color: #0363ad;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.talk-to-human:active {
+  background-color: #247ec4;
+}
+
+.bot {
+  height: 22rem;
+  position: relative;
+  bottom: 0;
+  margin-top: 2.8rem;
+}
+
+.chat {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+}
+
+.agentMessage {
+  margin: 1rem 0;
+  position: relative;
+  margin-left: 1rem;
+  padding-top: 0.5rem;
+  bottom: 1rem;
+  text-align: left;
+}
+.clientMessage {
+  margin: 1rem 0;
+  position: relative;
+  margin-left: 1rem;
+  padding-top: 0.5rem;
+  bottom: 1rem;
+  text-align: right;
+}
+
+.clientMessage .message {
+  background-color: white;
+  color: #3d3d3d;
+  border: 1px solid #e7e7e7;
+  margin-right: 1rem;
+}
+
+.message {
+  background-color: #0363ad;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  font-weight: 300;
+  display: inline;
+}
+
+.input input {
+  width: 100%;
+  height: 2rem;
+  border: none;
+  border-top: 1px solid #ededed;
+  padding-left: 1rem;
+}
+
+.history.on {
+  background-color: #f7f7f7;
+}
+
+.history {
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+}
+
+.left {
+  text-align: left;
+}
+
+.agent {
+  font-size: 1rem;
+  color: #3d3d3d;
+}
+
+.date {
+  color: #3d3d3d;
+  font-size: 0.9rem;
+}
+
+.live {
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 100%;
+  float: right;
+  position: relative;
+  bottom: 1.5rem;
+  right: 1rem;
+  background-color: #00ed34;
+}

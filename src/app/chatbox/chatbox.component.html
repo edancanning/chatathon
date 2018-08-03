@@ -1,0 +1,62 @@
+<div class="chatbox">
+  <div class="closed" (click)="toggleChat()" *ngIf="!open">Live Chat</div>
+  <div class="open" *ngIf="open">
+    <div [ngClass]="{'side': true, 'historyOn': historyShow}" *ngIf="side">
+      <div class="header">
+        <div class="title">{{sideTitle}}</div>
+      </div>
+      <div class="body">
+        <div class="faq-container" *ngIf="faqShow">
+          <div [ngClass]="{'faq': true,'selected-faq': i===selectedFaq}" *ngFor="let faq of faqs; let i = index" (click)="faqPick(i)">
+            <div class="faq-title">{{faq}}</div>
+            <div class="faq-body" *ngIf="i===selectedFaq">{{faqBody}}</div>
+          </div>
+        </div>
+        <div class="history-container" *ngIf="historyShow">
+          <div class="history on">
+            <div class="left">
+              <div class="agent">Josh | Transactions</div>
+              <i class="date">Aug 4st 2018 - 2:12PM</i>
+            </div>
+            <div class="live"></div>
+          </div>
+          <div class="history">
+            <div class="left">
+              <div class="agent">Emily | Payments</div>
+              <i class="date">Aug 1st 2018 - 4:56PM</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="header">
+        <div class="settings">
+          <mat-icon svgIcon="settings"></mat-icon>
+        </div>
+        <div class="title">{{title}}</div>
+        <div class="close">
+          <mat-icon svgIcon="close"></mat-icon>
+        </div>
+      </div>
+      <div class="body">
+        <div class="categories" *ngIf="categoriesShow">
+          <div class="category" *ngFor="let category of categories" (click)="categoryPicked()">{{category}}</div>
+        </div>
+        <div class="bot" *ngIf="botShow">
+          <button class="talk-to-human" (click)="talkToHumanPick()" *ngIf="talkToHumanButton">Talk to Human</button>
+          <div class="chat">
+            <div class="agentMessage" *ngFor="let agentMessage of agentMessages">
+              <div class="message">{{agentMessage}}</div>
+            </div>
+            <div class="clientMessage" *ngFor="let clientMessage of clientMessages">
+              <div class="message">{{clientMessage}}</div>
+            </div>
+            <div class="input">
+              <input type="text" (keyup.enter)=submitMessage($event) placeholder="Enter text here">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
